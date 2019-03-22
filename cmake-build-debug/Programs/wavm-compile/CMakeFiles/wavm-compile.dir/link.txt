@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/wavm-compile.dir/wavm-compile.cpp.o  -o ../../bin/wavm-compile -Wl,-rpath,/home/luke/Documents/WAVM/cmake-build-debug: ../../libWAVM.so 

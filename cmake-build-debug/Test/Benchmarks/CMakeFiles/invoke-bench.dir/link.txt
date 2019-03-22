@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/invoke-bench.dir/invoke-bench.cpp.o  -o ../../bin/invoke-bench -Wl,-rpath,/home/luke/Documents/WAVM/cmake-build-debug ../../libWAVM.so 

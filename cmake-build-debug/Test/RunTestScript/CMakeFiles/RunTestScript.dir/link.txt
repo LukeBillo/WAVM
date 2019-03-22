@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/RunTestScript.dir/RunTestScript.cpp.o  -o ../../bin/RunTestScript -Wl,-rpath,/home/luke/Documents/WAVM/cmake-build-debug ../../libWAVM.so 
