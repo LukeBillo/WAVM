@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/fuzz-instantiate.dir/fuzz-instantiate.cpp.o  -o ../../bin/fuzz-instantiate -Wl,-rpath,/home/luke/Documents/WAVM/cmake-build-debug ../../libWAVM.so 

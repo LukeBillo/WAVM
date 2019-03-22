@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/luke/Documents/WAVM/ThirdParty/libunwind/src/UnwindRegistersRestore.S
+assembly.h
+/home/luke/Documents/WAVM/ThirdParty/libunwind/src/assembly.h
+
+/home/luke/Documents/WAVM/ThirdParty/libunwind/src/UnwindRegistersSave.S
+assembly.h
+/home/luke/Documents/WAVM/ThirdParty/libunwind/src/assembly.h
+
+/home/luke/Documents/WAVM/ThirdParty/libunwind/src/assembly.h
+

@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="WAVM" targetName="HashMapTest" />
+      <config projectName="WAVM" targetName="WASTPrint" />
+      <config projectName="WAVM" targetName="wavm-compile" />
+      <config projectName="WAVM" targetName="fuzz-wasm" />
+      <config projectName="WAVM" targetName="Inline" />
+      <config projectName="WAVM" targetName="fuzz-assemble" />
+      <config projectName="WAVM" targetName="Emscripten" />
+      <config projectName="WAVM" targetName="wavm-run" />
+      <config projectName="WAVM" targetName="IR" />
+      <config projectName="WAVM" targetName="wavm-as" />
+      <config projectName="WAVM" targetName="HashSetTest" />
+      <config projectName="WAVM" targetName="wavm-c" />
+      <config projectName="WAVM" targetName="Runtime" />
+      <config projectName="WAVM" targetName="Examples" />
+      <config projectName="WAVM" targetName="fuzz-wast" />
+      <config projectName="WAVM" targetName="ThreadTest" />
+      <config projectName="WAVM" targetName="wavm-c-test" />
+      <config projectName="WAVM" targetName="SpecTests" />
+      <config projectName="WAVM" targetName="WASTParse" />
+      <config projectName="WAVM" targetName="dtoa" />
+      <config projectName="WAVM" targetName="fuzz-disassemble" />
+      <config projectName="WAVM" targetName="RunTestScript" />
+      <config projectName="WAVM" targetName="Platform" />
+      <config projectName="WAVM" targetName="fuzz-instantiate" />
+      <config projectName="WAVM" targetName="wavm-disas" />
+      <config projectName="WAVM" targetName="intrinsics_gen" />
+      <config projectName="WAVM" targetName="xxhash" />
+      <config projectName="WAVM" targetName="invoke-bench" />
+      <config projectName="WAVM" targetName="DumpTestModules" />
+      <config projectName="WAVM" targetName="WAVM" />
+      <config projectName="WAVM" targetName="LLVMJIT" />
+      <config projectName="WAVM" targetName="NFA" />
+      <config projectName="WAVM" targetName="fuzz-compile" />
+      <config projectName="WAVM" targetName="Logging" />
+      <config projectName="WAVM" targetName="RootFiles" />
+      <config projectName="WAVM" targetName="WASM" />
+      <config projectName="WAVM" targetName="WAVMTests" />
+      <config projectName="WAVM" targetName="fuzz-compile-model" />
+      <config projectName="WAVM" targetName="WAVMUnwind" />
+      <config projectName="WAVM" targetName="RegExp" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c9f1783-8412-44ae-a13c-1c084137b4ee" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/Test/RunTestScript/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Lib/WASTPrint/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Test/Benchmarks/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Include/WAVM/Inline/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Include/WAVM/Inline/xxhash/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Lib/WASM/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Test/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Examples/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Test/wavm-c/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Lib/Logging/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/ThirdParty/dtoa/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Test/fuzz/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Lib/NFA/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Lib/LLVMJIT/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Lib/IR/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Programs/wavm-as/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Lib/WASTParse/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Programs/wavm-disas/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Lib/Platform/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Test/Containers/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Test/spec/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Test/DumpTestModules/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Lib/Emscripten/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Lib/RegExp/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/Lib/wavm-c/CMakeFiles/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programs/wavm-run/wavm-run.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6384">
+              <caret line="336" column="26" selection-start-line="336" selection-start-column="26" selection-end-line="336" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Include/WAVM/Emscripten/Emscripten.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5282">
+              <caret line="278" column="28" selection-start-line="278" selection-start-column="18" selection-end-line="278" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>executable</find>
+      <find>functiontable</find>
+      <find>Generated stub</find>
+      <find>r</find>
+      <find>persist</find>
+      <find>printf</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Programs/wavm-run/wavm-run.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="374" />
+    <option name="y" value="30" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="WAVM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WAVM" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WAVM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WAVM" type="462c0819:PsiDirectoryNode" />
+              <item name="Include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WAVM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WAVM" type="462c0819:PsiDirectoryNode" />
+              <item name="Include" type="462c0819:PsiDirectoryNode" />
+              <item name="WAVM" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WAVM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WAVM" type="462c0819:PsiDirectoryNode" />
+              <item name="Include" type="462c0819:PsiDirectoryNode" />
+              <item name="WAVM" type="462c0819:PsiDirectoryNode" />
+              <item name="Emscripten" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WAVM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WAVM" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.wavm-run">
+    <configuration name="DumpTestModules" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="DumpTestModules" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="DumpTestModules">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Emscripten" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="Emscripten" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examples" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="Examples" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HashMapTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="HashMapTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="HashMapTest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HashSetTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="HashSetTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="HashSetTest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IR" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="IR" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Inline" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="Inline" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LLVMJIT" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="LLVMJIT" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Logging" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="Logging" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NFA" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="NFA" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Platform" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="Platform" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegExp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="RegExp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RootFiles" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="RootFiles" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunTestScript" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="RunTestScript" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="RunTestScript">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Runtime" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="Runtime" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpecTests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="SpecTests" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="ThreadTest" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WASM" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="WASM" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WASTParse" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="WASTParse" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WASTPrint" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="WASTPrint" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WAVM" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="WAVM" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WAVMTests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="WAVMTests" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WAVMUnwind" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="WAVMUnwind" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dtoa" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="dtoa" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fuzz-assemble" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="fuzz-assemble" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="fuzz-assemble">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fuzz-compile-model" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="fuzz-compile-model" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="fuzz-compile-model">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fuzz-compile" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="fuzz-compile" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="fuzz-compile">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fuzz-disassemble" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="fuzz-disassemble" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="fuzz-disassemble">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fuzz-instantiate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="fuzz-instantiate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="fuzz-instantiate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fuzz-wasm" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="fuzz-wasm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="fuzz-wasm">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fuzz-wast" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="fuzz-wast" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="fuzz-wast">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="intrinsics_gen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="intrinsics_gen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="invoke-bench" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="invoke-bench" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="invoke-bench">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wavm-as" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="wavm-as" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="wavm-as">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wavm-c-test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="wavm-c-test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="wavm-c-test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wavm-c" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="wavm-c" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wavm-compile" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="wavm-compile" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="wavm-compile">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wavm-disas" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="wavm-disas" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="wavm-disas">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wavm-run" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/../c++-wasm-files/wasm/basic-functions.wasm --interactive --debug" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="wavm-run" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WAVM" RUN_TARGET_NAME="wavm-run">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="xxhash" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WAVM" TARGET_NAME="xxhash" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.intrinsics_gen" />
+      <item itemvalue="Application.RootFiles" />
+      <item itemvalue="Application.WAVM" />
+      <item itemvalue="Application.Examples" />
+      <item itemvalue="Application.Inline" />
+      <item itemvalue="Application.xxhash" />
+      <item itemvalue="Application.Emscripten" />
+      <item itemvalue="Application.IR" />
+      <item itemvalue="Application.LLVMJIT" />
+      <item itemvalue="Application.Logging" />
+      <item itemvalue="Application.NFA" />
+      <item itemvalue="Application.Platform" />
+      <item itemvalue="Application.RegExp" />
+      <item itemvalue="Application.Runtime" />
+      <item itemvalue="Application.ThreadTest" />
+      <item itemvalue="Application.WASM" />
+      <item itemvalue="Application.WASTParse" />
+      <item itemvalue="Application.WASTPrint" />
+      <item itemvalue="Application.wavm-c" />
+      <item itemvalue="Application.wavm-as" />
+      <item itemvalue="Application.wavm-compile" />
+      <item itemvalue="Application.wavm-disas" />
+      <item itemvalue="Application.wavm-run" />
+      <item itemvalue="Application.WAVMTests" />
+      <item itemvalue="Application.invoke-bench" />
+      <item itemvalue="Application.HashMapTest" />
+      <item itemvalue="Application.HashSetTest" />
+      <item itemvalue="Application.DumpTestModules" />
+      <item itemvalue="Application.fuzz-assemble" />
+      <item itemvalue="Application.fuzz-compile" />
+      <item itemvalue="Application.fuzz-compile-model" />
+      <item itemvalue="Application.fuzz-disassemble" />
+      <item itemvalue="Application.fuzz-instantiate" />
+      <item itemvalue="Application.fuzz-wasm" />
+      <item itemvalue="Application.fuzz-wast" />
+      <item itemvalue="Application.RunTestScript" />
+      <item itemvalue="Application.SpecTests" />
+      <item itemvalue="Application.wavm-c-test" />
+      <item itemvalue="Application.dtoa" />
+      <item itemvalue="Application.WAVMUnwind" />
+    </list>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c9f1783-8412-44ae-a13c-1c084137b4ee" name="Default Changelist" comment="" />
+      <created>1553034436172</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553034436172</updated>
+      <workItem from="1553034443224" duration="16709000" />
+      <workItem from="1553099360199" duration="50000" />
+      <workItem from="1553268761813" duration="610000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="17369000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18482906" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32968238" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978093" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32968238" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="CMake" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Include/WAVM/Runtime/Linker.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/fuzz/fuzz-wasm.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebAssembly.tmLanguage">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9519">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Logging/Logging.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Include/WAVM/Runtime/Intrinsics.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Include/WAVM/Runtime/RuntimeData.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1085">
+          <caret line="83" column="36" lean-forward="true" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/LLVMJIT/Win64EH.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="308" column="31" selection-start-line="308" selection-start-column="31" selection-end-line="308" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/stdlib.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="91" column="8" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/inttypes.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="104" column="9" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Runtime/Runtime.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Runtime/Module.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="511" column="17" selection-start-line="511" selection-start-column="17" selection-end-line="511" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Platform/POSIX/Diagnostics.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="89" column="31" lean-forward="true" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Emscripten/Emscripten.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="594" column="36" selection-start-line="594" selection-start-column="30" selection-end-line="594" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Emscripten/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/Benchmark/Benchmark.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Doc/SignalsAndExceptions.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2628" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Doc/WavixObjectReachability.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programs/wavm-run/wavm-run.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6384">
+          <caret line="336" column="26" selection-start-line="336" selection-start-column="26" selection-end-line="336" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5282">
+          <caret line="278" column="28" selection-start-line="278" selection-start-column="18" selection-end-line="278" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Include/WAVM/Emscripten/Emscripten.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

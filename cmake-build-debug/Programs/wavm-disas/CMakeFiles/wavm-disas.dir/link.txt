@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/wavm-disas.dir/wavm-disas.cpp.o  -o ../../bin/wavm-disas -Wl,-rpath,/home/luke/Documents/WAVM/cmake-build-debug: ../../libWAVM.so 

@@ -4,6 +4,8 @@
 #include <string>
 #include <utility>
 #include <vector>
+#include <iostream>
+#include <sstream>
 
 #include "WAVM/Emscripten/Emscripten.h"
 #include "WAVM/IR/Module.h"
@@ -161,7 +163,10 @@ struct CommandLineOptions
 	bool enableEmscripten = true;
 	bool enableThreadTest = false;
 	bool precompiled = false;
+	bool interactive = false;
 };
+
+
 
 static int run(const CommandLineOptions& options)
 {
@@ -251,8 +256,84 @@ static int run(const CommandLineOptions& options)
 		Emscripten::initializeGlobals(context, irModule, moduleInstance);
 	}
 
-	// Look up the function export to call.
-	Function* function;
+    // Look up the function export to call.
+    Function* function;
+
+	if (options.interactive)
+	{
+		std::string input;
+
+		while (input != "exit") {
+		    std::getline(std::cin, input);
+
+		    Log::printf(Log::debug, "Input: %s\n", input.c_str());
+
+		    std::string command;
+            std::istringstream iss(input, std::istringstream::in);
+
+            iss >> command;
+
+            if (command == "exec")
+            {
+                std::string functionName;
+                iss >> functionName;
+
+                function = asFunctionNullable(getInstanceExport(moduleInstance, functionName));
+
+                if (!function) {
+                    Log::printf(Log::error, "No function found named %s\n", functionName.c_str());
+                    continue;
+                }
+
+                FunctionType functionType = getFunctionType(function);
+
+                std::string nextArg;
+                std::vector<Value> invokeArgs;
+                int i = 0;
+
+                while (iss >> nextArg) {
+                    const char* convertedArg = nextArg.c_str();
+                    Value value;
+                    switch(functionType.params()[i])
+                    {
+                        case ValueType::i32: value = (U32)atoi(convertedArg); break;
+                        case ValueType::i64: value = (U64)atol(convertedArg); break;
+                        case ValueType::f32: value = (F32)atof(convertedArg); break;
+                        case ValueType::f64: value = atof(convertedArg); break;
+                        case ValueType::v128:
+                        case ValueType::anyref:
+                        case ValueType::funcref:
+                            Errors::fatalf("Cannot parse command-line argument for %s function parameter\n",
+                                           asString(functionType.params()[i]));
+                        default: Errors::unreachable();
+                    }
+                    invokeArgs.push_back(value);
+
+                    ++i;
+                }
+
+                Log::printf(Log::debug, "Invoking %s\n", functionName.c_str());
+
+                // Invoke the function.
+                Timing::Timer executionTimer;
+                IR::ValueTuple functionResults = invokeFunctionChecked(context, function, invokeArgs);
+                Timing::logTimer("Invoked function", executionTimer);
+
+                Log::printf(Log::debug,
+                            "%s returned: %s\n",
+                            functionName.c_str(),
+                            asString(functionResults).c_str());
+            }
+            else
+            {
+                Log::printf(Log::error, "Unrecognised input.\n");
+                std::cin.ignore();
+            }
+		}
+
+		return EXIT_SUCCESS;
+	}
+
 	if(!options.functionName)
 	{
 		function = asFunctionNullable(getInstanceExport(moduleInstance, "main"));
@@ -406,6 +487,10 @@ int main(int argc, char** argv)
 		else if(!strcmp(*options.args, "--precompiled"))
 		{
 			options.precompiled = true;
+		}
+		else if(!strcmp(*options.args, "--interactive"))
+		{
+			options.interactive = true;
 		}
 		else if(!strcmp(*options.args, "--"))
 		{

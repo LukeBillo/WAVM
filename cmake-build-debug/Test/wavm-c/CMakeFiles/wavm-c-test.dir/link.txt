@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/wavm-c-test.dir/wavm-c-test.c.o  -o ../../bin/wavm-c-test -Wl,-rpath,/home/luke/Documents/WAVM/cmake-build-debug ../../libWAVM.so 

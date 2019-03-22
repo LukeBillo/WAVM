@@ -1,0 +1,2 @@
+/usr/bin/ar qc libWAVMUnwind.a  CMakeFiles/WAVMUnwind.dir/src/libunwind.cpp.o CMakeFiles/WAVMUnwind.dir/src/Unwind-sjlj.c.o CMakeFiles/WAVMUnwind.dir/src/UnwindLevel1-gcc-ext.c.o CMakeFiles/WAVMUnwind.dir/src/UnwindLevel1.c.o CMakeFiles/WAVMUnwind.dir/src/UnwindRegistersRestore.S.o CMakeFiles/WAVMUnwind.dir/src/UnwindRegistersSave.S.o
+/usr/bin/ranlib libWAVMUnwind.a

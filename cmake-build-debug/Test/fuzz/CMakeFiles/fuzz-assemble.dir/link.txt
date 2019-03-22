@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/fuzz-assemble.dir/fuzz-assemble.cpp.o  -o ../../bin/fuzz-assemble -Wl,-rpath,/home/luke/Documents/WAVM/cmake-build-debug ../../libWAVM.so 

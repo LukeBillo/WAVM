@@ -1,0 +1,1 @@
+/usr/bin/c++  -O2 -g -DNDEBUG   CMakeFiles/HashSetTest.dir/HashSetTest.cpp.o  -o ../../bin/HashSetTest -Wl,-rpath,/home/luke/Documents/WAVM/build ../../libWAVM.so 

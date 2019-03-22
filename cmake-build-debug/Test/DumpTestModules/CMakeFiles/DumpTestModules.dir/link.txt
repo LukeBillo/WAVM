@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/DumpTestModules.dir/DumpTestModules.cpp.o  -o ../../bin/DumpTestModules -Wl,-rpath,/home/luke/Documents/WAVM/cmake-build-debug ../../libWAVM.so 
