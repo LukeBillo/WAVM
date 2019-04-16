@@ -11,6 +11,12 @@
 #include <utility>
 #ifndef _WIN32
 #include <sys/uio.h>
+#include <atomic>
+#include <WAVM/Runtime/RuntimeData.h>
+#include <WAVM/Inline/Lock.h>
+#include <WAVM/Inline/IntrusiveSharedPtr.h>
+#include <WAVM/Inline/IndexMap.h>
+
 #endif
 
 #include "WAVM/Emscripten/Emscripten.h"
@@ -26,6 +32,8 @@
 #include "WAVM/Platform/Defines.h"
 #include "WAVM/Runtime/Intrinsics.h"
 #include "WAVM/Runtime/Runtime.h"
+#include "WAVM/Platform/Thread.h"
+#include "WAVM/Platform/Mutex.h"
 
 using namespace WAVM;
 using namespace WAVM::IR;
@@ -77,6 +85,52 @@ struct MutableGlobals
 	I32 _stdout;
 };
 
+struct ExitThreadException
+{
+    I64 code;
+};
+
+struct Thread
+{
+    Uptr id = UINTPTR_MAX;
+    std::atomic<Uptr> numRefs{0};
+
+    Platform::Thread* platformThread = nullptr;
+    Runtime::GCPointer<Runtime::Context> context;
+    Runtime::GCPointer<Runtime::Function> entryFunction;
+    Memory* memory;
+    Table* table;
+
+    const std::vector<IR::Value>* arguments;
+
+    bool threwException = false;
+    Exception* exception = nullptr;
+    Platform::Mutex resultMutex;
+    I64 result = 0;
+
+    FORCENOINLINE Thread(Runtime::Context* inContext,
+                         Runtime::Function* inEntryFunction,
+                         const std::vector<IR::Value>* inArgument,
+                         Memory* parentMemory,
+                         Table* parentTable)
+            : context(inContext)
+            , entryFunction(inEntryFunction)
+            , memory(parentMemory)
+            , table(parentTable)
+            , arguments(inArgument)
+    {
+    }
+
+    void addRef(Uptr delta = 1) { numRefs += delta; }
+    void removeRef()
+    {
+        if(--numRefs == 0) {
+            delete arguments;
+            delete this;
+        }
+    }
+};
+
 DEFINE_INTRINSIC_GLOBAL(env, "STACKTOP", I32, STACKTOP, 64 * IR::numBytesPerPage);
 DEFINE_INTRINSIC_GLOBAL(env, "STACK_MAX", I32, STACK_MAX, 128 * IR::numBytesPerPage);
 DEFINE_INTRINSIC_GLOBAL(env,
@@ -120,7 +174,15 @@ DEFINE_INTRINSIC_GLOBAL(env, "EMT_STACK_MAX", U32, EMT_STACK_MAX, 0)
 DEFINE_INTRINSIC_GLOBAL(env, "eb", I32, eb, 0)
 
 static thread_local Memory* emscriptenMemory = nullptr;
+static thread_local Table* emscriptenTable = nullptr;
 static thread_local U32 emscriptenErrNoLocation = 0;
+
+// Thread vars - the current active thread, mutex and all the running threads
+// Thread IDs are I32 here, since Emscripten compiles to I32
+static thread_local Thread* activeThread = nullptr;
+static Platform::Mutex threadsMutex;
+static IndexMap<Uptr, IntrusiveSharedPtr<Thread>> threads(1, INT32_MAX);
+
 
 static bool resizeHeap(U32 desiredNumBytes)
 {
@@ -219,6 +281,129 @@ DEFINE_INTRINSIC_FUNCTION(env, "_sysconf", I32, _sysconf, I32 a)
 	case sysConfPageSize: return IR::numBytesPerPage;
 	default: throwException(Runtime::ExceptionTypes::calledUnimplementedIntrinsic);
 	}
+}
+
+static void validateThreadId(Uptr threadId)
+{
+    if(threadId == 0 || !threads.contains(threadId))
+    { throwException(ExceptionTypes::invalidArgument); }
+}
+
+static IntrusiveSharedPtr<Thread> removeThreadById(Uptr threadId)
+{
+    IntrusiveSharedPtr<Thread> thread;
+
+    Lock<Platform::Mutex> threadsLock(threadsMutex);
+    validateThreadId(threadId);
+    thread = std::move(threads[threadId]);
+    threads.removeOrFail(threadId);
+
+    wavmAssert(thread->id == Uptr(threadId));
+    thread->id = UINTPTR_MAX;
+
+    return thread;
+}
+
+static I64 threadEntry(void* inThread)
+{
+    {
+        auto* thread = static_cast<Thread*>(inThread);
+        activeThread = thread;
+        thread->removeRef();
+    }
+
+    emscriptenMemory = activeThread->memory;
+    emscriptenTable = activeThread->table;
+
+    catchRuntimeExceptionsOnRelocatableStack(
+            []() {
+                I64 result;
+                try
+                {
+                    result = invokeFunctionChecked(activeThread->context,
+                                                     activeThread->entryFunction,
+                                                     *activeThread->arguments)
+                                                             .values[0].i64;
+                }
+                catch(ExitThreadException exitThreadException)
+                {
+                    result = exitThreadException.code;
+                }
+
+                Lock<Platform::Mutex> resultLock(activeThread->resultMutex);
+                activeThread->result = result;
+            },
+            [](Exception* exception) {
+                Lock<Platform::Mutex> resultLock(activeThread->resultMutex);
+                if(activeThread->numRefs == 1)
+                {
+                    // If the thread has already been detached, the exception is fatal.
+                    Errors::fatalf("Runtime exception in detached thread: %s",
+                                   describeException(exception).c_str());
+                }
+                else
+                {
+                    activeThread->threwException = true;
+                    activeThread->exception = exception;
+                }
+            });
+
+    return 0;
+}
+
+FORCENOINLINE static Uptr allocateThreadId(Thread* thread)
+{
+    Lock<Platform::Mutex> threadsLock(threadsMutex);
+    thread->id = threads.add(0, thread);
+    errorUnless(thread->id != 0);
+    return thread->id;
+}
+
+DEFINE_INTRINSIC_FUNCTION(env,
+                          "_pthread_create",
+                          I32,
+                          _pthread_create,
+                          I32 threadId,
+                          I32 threadAttrs,
+                          I32 startRoutineIndex,
+                          I32 args)
+{
+    Log::printf(Log::error, "_pthread_create reached...\n");
+
+    const Object* functionRef = getTableElement(emscriptenTable, startRoutineIndex);
+    auto* threadRunFunction = (Function*) functionRef;
+
+    const auto createdThreadContext
+            = createContext(getCompartmentFromContext(getContextFromRuntimeData(contextRuntimeData)));
+
+    auto argsList = new std::vector<Value>();
+    argsList->emplace_back(args);
+
+    auto* createdThread = new Thread(createdThreadContext, threadRunFunction, argsList, emscriptenMemory, emscriptenTable);
+
+    const Uptr numStackBytes = STACK_MAX.getValue().u64 - STACKTOP.getValue().u64;
+
+    allocateThreadId(createdThread);
+    createdThread->addRef();
+
+    memoryRef<U32>(emscriptenMemory, threadId) = createdThread->id;
+
+    createdThread->platformThread
+            = Platform::createThread(numStackBytes, threadEntry, createdThread);
+
+    return 0;
+}
+
+DEFINE_INTRINSIC_FUNCTION(env, "_pthread_join", I32, _pthread_join, I32 threadId, I32 valuePtr)
+{
+    IntrusiveSharedPtr<Thread> thread = removeThreadById(Uptr(threadId));
+    Platform::joinThread(thread->platformThread);
+    thread->platformThread = nullptr;
+
+    Lock<Platform::Mutex> resultLock(thread->resultMutex);
+
+    valuePtr = thread->result;
+    return 0;
 }
 
 DEFINE_INTRINSIC_FUNCTION(env, "_pthread_cond_wait", I32, _pthread_cond_wait, I32 a, I32 b)
@@ -791,6 +976,8 @@ Emscripten::Instance* Emscripten::instantiate(Compartment* compartment, const IR
 		{"memory", Runtime::asObject(memory)},
 		{"table", Runtime::asObject(table)},
 	};
+
+	emscriptenTable = table;
 
 	Instance* instance = new Instance;
 	instance->env = Intrinsics::instantiateModule(

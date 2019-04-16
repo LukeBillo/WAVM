@@ -145,7 +145,7 @@ static bool loadModule(const char* filename, IR::Module& outModule)
 		if(!WAST::parseModule(
 			   (const char*)fileBytes.data(), fileBytes.size(), outModule, parseErrors))
 		{
-			Log::printf(Log::error, "Error parsing WebAssembly text file:\n");
+			Log::printf(Log::error, "Error parsing   WebAssembly text file:\n");
 			WAST::reportParseErrors(filename, parseErrors);
 			return false;
 		}
